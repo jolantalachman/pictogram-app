@@ -1,0 +1,130 @@
+<app-menu
+  [selectedCategory]="selectedCategory"
+  (selectCategory)="onCategorySelected($event)"></app-menu>
+<div class="ion-page" id="main-content">
+  <ion-header class="picto-header">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title> {{ 'SENTENCE.CREATE_SENTENCE' | translate }} </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    @if (tiles$ | async; as tiles) {
+    <ion-fab vertical="top" slot="fixed" [style.width]="'100%'">
+      <app-generated-sentence
+        [selectedTiles$]="selectedTiles$"
+        [generatedSentence]="generatedSentence"
+        (speakEnded)="handleSpeakEnded()"></app-generated-sentence>
+    </ion-fab>
+    @if (selectedTiles$ | async; as selectedTiles) {
+    <div *ngIf="selectedTiles.length > 0" [style.height]="'140px'"></div>
+    <ion-fab horizontal="center" vertical="bottom" slot="fixed">
+      <div class="button-container">
+        <ion-button
+          *ngIf="selectedTiles.length > 0"
+          shape="round"
+          (click)="generateSentence(tiles)"
+          [disabled]="isPlayMode"
+          >{{ 'SENTENCE.GENERATE_SENTENCE' | translate }}</ion-button
+        >
+      </div>
+    </ion-fab>
+    } @if (tiles.length === 0) {
+    <ion-label
+      ><h1 class="highlight">{{ 'NO_DATA' | translate }}</h1></ion-label
+    >
+    }
+
+    <ion-grid class="grid">
+      <ion-row *ngIf="getCategory(tiles, 'nouns')">
+        <ion-col size="12" *ngIf="!selectedCategory">
+          <h3 class="column-label">{{ 'SENTENCE.NOUNS' | translate }}</h3>
+        </ion-col>
+        <ion-col
+          [size]="tileSize"
+          *ngFor="let tile of tiles"
+          [hidden]="tile.category !== 'nouns'">
+          <app-tile
+            [isSelected]="tile.isSelected"
+            [icon]="tile.icon"
+            [label]="tile.label"
+            (click)="toggleTileSelection(tile)"></app-tile>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="getCategory(tiles, 'verbs')">
+        <ion-col size="12" *ngIf="!selectedCategory">
+          <h3 class="column-label">{{ 'SENTENCE.VERBS' | translate }}</h3>
+        </ion-col>
+        <ion-col
+          [size]="tileSize"
+          *ngFor="let tile of tiles"
+          [hidden]="tile.category !== 'verbs'">
+          <app-tile
+            [isSelected]="tile.isSelected"
+            [icon]="tile.icon"
+            [label]="tile.label"
+            (click)="toggleTileSelection(tile)"></app-tile>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="getCategory(tiles, 'adjectives')">
+        <ion-col size="12" *ngIf="!selectedCategory">
+          <h3 class="column-label">{{ 'SENTENCE.ADJECTIVES' | translate }}</h3>
+        </ion-col>
+        <ion-col
+          [size]="tileSize"
+          *ngFor="let tile of tiles"
+          [hidden]="tile.category !== 'adjectives'">
+          <app-tile
+            [isSelected]="tile.isSelected"
+            [icon]="tile.icon"
+            [label]="tile.label"
+            (click)="toggleTileSelection(tile)"></app-tile>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="getCategory(tiles, 'questions')">
+        <ion-col size="12" *ngIf="!selectedCategory">
+          <h3 class="column-label">{{ 'SENTENCE.QUESTIONS' | translate }}</h3>
+        </ion-col>
+        <ion-col
+          [size]="tileSize"
+          *ngFor="let tile of tiles"
+          [hidden]="tile.category !== 'questions'">
+          <app-tile
+            [isSelected]="tile.isSelected"
+            [icon]="tile.icon"
+            [label]="tile.label"
+            (click)="toggleTileSelection(tile)"></app-tile>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="getCategory(tiles, 'expressions')">
+        <ion-col size="12" *ngIf="!selectedCategory">
+          <h3 class="column-label">{{ 'SENTENCE.EXPRESSIONS' | translate }}</h3>
+        </ion-col>
+        <ion-col
+          [size]="tileSize"
+          *ngFor="let tile of tiles"
+          [hidden]="tile.category !== 'expressions'">
+          <app-tile
+            [isSelected]="tile.isSelected"
+            [icon]="tile.icon"
+            [label]="tile.label"
+            (click)="toggleTileSelection(tile)"></app-tile>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    } @else {
+    <div class="spinner">
+      <ion-spinner color="light"></ion-spinner>
+    </div>
+    }
+  </ion-content>
+</div>

@@ -1,0 +1,12 @@
+@import '../../../../../../theme/variables.scss';
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.selected {
+  --background: #{$disabled-color};
+}

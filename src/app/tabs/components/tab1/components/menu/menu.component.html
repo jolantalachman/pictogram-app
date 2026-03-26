@@ -1,0 +1,41 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ 'SENTENCE.CATEGORIES' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div class="menu-items">
+      <ion-item
+        [class.selected]="selectedCategory === undefined"
+        (click)="toggleList()">
+        <ion-label>{{ 'SENTENCE.ALL' | translate }}</ion-label>
+      </ion-item>
+      <ion-item
+        [class.selected]="selectedCategory === 'nouns'"
+        (click)="toggleList('nouns')">
+        <ion-label>{{ 'SENTENCE.NOUNS' | translate }}</ion-label>
+      </ion-item>
+      <ion-item
+        [class.selected]="selectedCategory === 'verbs'"
+        (click)="toggleList('verbs')">
+        <ion-label>{{ 'SENTENCE.VERBS' | translate }}</ion-label>
+      </ion-item>
+      <ion-item
+        [class.selected]="selectedCategory === 'adjectives'"
+        (click)="toggleList('adjectives')">
+        <ion-label>{{ 'SENTENCE.ADJECTIVES' | translate }}</ion-label>
+      </ion-item>
+      <ion-item
+        [class.selected]="selectedCategory === 'questions'"
+        (click)="toggleList('questions')">
+        <ion-label>{{ 'SENTENCE.QUESTIONS' | translate }}</ion-label>
+      </ion-item>
+      <ion-item
+        [class.selected]="selectedCategory === 'expressions'"
+        (click)="toggleList('expressions')">
+        <ion-label>{{ 'SENTENCE.EXPRESSIONS' | translate }}</ion-label>
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-menu>

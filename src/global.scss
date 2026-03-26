@@ -1,0 +1,60 @@
+@import '@ionic/angular/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '@ionic/angular/css/normalize.css';
+@import '@ionic/angular/css/structure.css';
+@import '@ionic/angular/css/typography.css';
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import '@ionic/angular/css/padding.css';
+@import '@ionic/angular/css/float-elements.css';
+@import '@ionic/angular/css/text-alignment.css';
+@import '@ionic/angular/css/text-transformation.css';
+@import '@ionic/angular/css/flex-utils.css';
+@import 'theme/variables.scss';
+
+/* Toolbar styling */
+ion-toolbar {
+  --background: #{$primary-color}; /* Light purple background */
+  --color: #{$text-color}; /* Black text color */
+  --padding-top: 10px; /* Padding at the top */
+  --padding-bottom: 10px; /* Padding at the bottom */
+  --min-height: 70px; /* Minimum height */
+}
+
+/* Content background */
+ion-content {
+  --background: #{$secondary-color}; /* Dark purple background */
+  --padding-top: env(safe-area-inset-top);
+}
+
+/* Tab bar styling */
+ion-tab-bar {
+  --background: #{$primary-color}; /* Light purple background */
+  --color: #{$text-color}; /* Black text color */
+  --color-selected: #{$text-color}; /* Black color for selected tab */
+  --padding-top: 10px; /* Padding at the top */
+  --padding-bottom: 10px; /* Padding at the bottom */
+  --min-height: 70px; /* Minimum height of the tab bar */
+
+  .tab-selected {
+    background-color: #{$accent-color}; /* Light purple for selected tab */
+  }
+}
+
+/* List item styling */
+ion-item {
+  --background: #{$accent-color}; /* Light purple background for items */
+  --color: #{$text-color}; /* Black text color */
+  --border-radius: 20px; /* Rounded corners */
+}
+
+ion-button {
+  --background: #{$accent-color};
+  --color: #{$text-color};
+}
+
+ion-card {
+  --background: #{$highlight-color};
+}

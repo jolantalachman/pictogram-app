@@ -1,0 +1,28 @@
+@if (selectedTiles$ | async; as selectedTiles) {
+  <div class="generated-sentence-container" *ngIf="selectedTiles.length > 0">
+    @if (playMode) {
+      <h3>{{ 'SENTENCE.PLAYING_SENTENCE' | translate }}</h3>
+    } @else {
+      <h3>{{ 'SENTENCE.GENERATED_SENTENCE' | translate }}</h3>
+    }
+    <div class="tiles">
+      <div class="align-items">
+        <span class="icon" *ngFor="let tile of selectedTiles">
+          {{ tile.icon }}
+        </span>
+      </div>
+      <div class="align-items">
+        <span *ngFor="let tile of selectedTiles">
+          {{ tile.label | translate }}
+        </span>
+      </div>
+    </div>
+    @if (playMode) {
+      <ion-icon name="volume-high-sharp"></ion-icon>
+    }
+  </div>
+} @else {
+  <div class="spinner">
+    <ion-spinner color="light"></ion-spinner>
+  </div>
+}

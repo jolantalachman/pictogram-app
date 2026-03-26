@@ -1,0 +1,11 @@
+<ion-card [class.selected]="isSelected">
+  <ion-card-content>
+    <div class="icon">{{ icon }}</div>
+  </ion-card-content>
+
+  <ion-footer>
+    <div class="footer-content footer-padding">
+      <div class="label">{{ label | translate | uppercase }}</div>
+    </div>
+  </ion-footer>
+</ion-card>

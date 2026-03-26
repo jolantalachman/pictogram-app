@@ -1,0 +1,32 @@
+@import '../../../../../../theme/variables.scss';
+
+.selected {
+  --background: #{$selected-color};
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  color: $text-color;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-wrap: anywhere;
+}
+
+.footer-padding {
+  padding: 15px;
+}

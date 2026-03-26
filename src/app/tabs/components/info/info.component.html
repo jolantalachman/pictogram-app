@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="info-container">
+    <ion-label
+      ><h1>{{ 'INFO.TITLE' | translate }}</h1></ion-label
+    >
+    <span class="prompt-container">
+      <ion-input
+        (ionChange)="promptChanged($event)"
+        labelPlacement="stacked"
+        [(ngModel)]="prompt"
+        [label]="'INFO.ENTER_PROMPT' | translate"
+        [helperText]="'INFO.ENTER_PROMPT_HELPER' | translate"
+        fill="solid"></ion-input>
+      <ion-button
+        shape="round"
+        (click)="changePrompt()"
+        [disabled]="isPromptDefault">
+        {{ 'INFO.CHANGE' | translate }}
+      </ion-button>
+    </span>
+    <span class="prompt-container">
+      <ion-select
+        (ionChange)="tLayChanged($event)"
+        labelPlacement="stacked"
+        [label]="'INFO.TILES_IN_ROW' | translate"
+        fill="solid"
+        [(ngModel)]="tileLayout">
+        @for (columnNum of [].constructor(6); track $index) {
+          <ion-select-option [value]="$index + 1">{{
+            $index + 1
+          }}</ion-select-option>
+        }
+      </ion-select>
+      <ion-button
+        shape="round"
+        (click)="changeTileLayout()"
+        [disabled]="isTileLayoutDefault">
+        {{ 'INFO.CHANGE' | translate }}
+      </ion-button>
+    </span>
+  </div>
+</ion-content>

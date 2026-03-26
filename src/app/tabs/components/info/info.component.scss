@@ -1,0 +1,27 @@
+@import '../../../../theme/variables.scss';
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: $highlight-color;
+  padding-inline: 20px;
+
+  ion-input {
+    color: black;
+    background-color: $highlight-color;
+  }
+
+  ion-select {
+    color: black;
+  }
+
+  .prompt-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+}

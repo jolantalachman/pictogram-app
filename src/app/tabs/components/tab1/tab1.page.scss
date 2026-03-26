@@ -1,0 +1,35 @@
+@import '../../../../theme/variables.scss';
+:host {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .grid {
+    margin-bottom: 50px;
+  }
+
+  .column-label {
+    color: $highlight-color;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight {
+  color: $highlight-color;
+}
