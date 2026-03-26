@@ -45,7 +45,7 @@ jobs:
           EOF
 
       - name: Build app
-        run: ionic build --prod -- --base-href="https://jolantalachman.github.io/pictogram-app/"
+        run: ionic build --prod -- --base-href="./"
 
       - name: Deploy to GitHub Pages
         run: |
