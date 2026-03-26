@@ -1,4 +1,4 @@
-name: Build & Deploy Ionic App
+name: Deploy Angular to GitHub Pages
 
 on:
   push:
@@ -6,23 +6,24 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Use Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
-        with:
-          node-version: 18
 
       - name: Install dependencies
         run: npm install --force
+
       - name: Create environment.prod.ts
         run: |
           cat > src/environments/environment.prod.ts <<EOF
@@ -39,8 +40,19 @@ jobs:
           };
           EOF
 
-      - name: Build app with Angular CLI
-        run: ng build --prod --base-href="./" --output-path=www
+      - name: Build Angular
+        run: npm run build -- --configuration production --base-href /${{ github.event.repository.name }}/
 
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+
+    steps:
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=www --no-silent
+        uses: actions/deploy-pages@v4
