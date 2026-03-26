@@ -45,6 +45,8 @@ jobs:
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist/pictogram-app
 
   deploy:
     needs: build
