@@ -23,11 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install --force
-
-      - name: Install Ionic CLI
-        run: npm install -g @ionic/cli
-
-      # 🔐 Inject GitHub Secrets into Angular environment
       - name: Create environment.prod.ts
         run: |
           cat > src/environments/environment.prod.ts <<EOF
@@ -44,9 +39,8 @@ jobs:
           };
           EOF
 
-      - name: Build app
-        run: ionic build --prod -- --base-href="./"
+      - name: Build app with Angular CLI
+        run: ng build --prod --base-href="./" --output-path=www
 
       - name: Deploy to GitHub Pages
-        run: |
-          npx angular-cli-ghpages --dir=www --no-silent
+        run: npx angular-cli-ghpages --dir=www --no-silent
