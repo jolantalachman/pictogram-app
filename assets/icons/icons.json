@@ -1,0 +1,434 @@
+[
+  {
+    "label": "Person",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "👤",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "House",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🏠",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Food",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🍔",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Water",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "💧",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Bed",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🛏️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Car",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🚗",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Dog",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🐕",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Cat",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🐱",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Phone",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "📱",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Book",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "📖",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Computer",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "💻",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Ball",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "⚽",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "I",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🧑‍🦱",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "You",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "🧑‍🦰",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "They",
+    "category": "nouns",
+    "isCustom": false,
+    "icon": "👥",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Eat",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🍽️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Love",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "❤️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Drink",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🥤",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Sleep",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🛌",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Go",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🚶‍♂️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Come",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "➡️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Help",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🤲",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Sit",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🪑",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Stand",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🧍",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Run",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🏃‍♂️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Play",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "🎮",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Read",
+    "category": "verbs",
+    "isCustom": false,
+    "icon": "📚",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Happy",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "😊",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Sad",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "☹️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Hot",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "🔥",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Cold",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "❄️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Big",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "⬆️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Small",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "⬇️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Fast",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "⚡",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Slow",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "🐌",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Beautiful",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "✨",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Ugly",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "👹",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Clean",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "🧹",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Dirty",
+    "category": "adjectives",
+    "isCustom": false,
+    "icon": "🗑️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Where",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "📍",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "What",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "❓",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Who",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "👤",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Why",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "❔",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Yes",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "✔️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "No",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "❌",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "How",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "⚙️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "When",
+    "category": "questions",
+    "isCustom": false,
+    "icon": "📅",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Please",
+    "category": "expressions",
+    "isCustom": false,
+    "icon": "✋",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Thank you",
+    "category": "expressions",
+    "isCustom": false,
+    "icon": "👏",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Sorry",
+    "category": "expressions",
+    "isCustom": false,
+    "icon": "😢",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Excuse me",
+    "category": "expressions",
+    "isCustom": false,
+    "icon": "☝️",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Good morning",
+    "category": "expressions",
+    "isCustom": false,
+    "icon": "🌅",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Good night",
+    "category": "expressions",
+    "isCustom": false,
+    "icon": "🌙",
+    "isSelected": false,
+    "userId": ""
+  },
+  {
+    "label": "Goodbye",
+    "category": "expressions",
+    "isCustom": false,
+    "icon": "👋",
+    "isSelected": false,
+    "userId": ""
+  }
+]
