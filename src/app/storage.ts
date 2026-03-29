@@ -1,13 +1,13 @@
-import { Storage } from '@capacitor/storage';
+import { Preferences } from '@capacitor/preferences';
 
 export async function setItem(key: string, value: string) {
-  await Storage.set({
-    key: key,
-    value: value,
+  await Preferences.set({
+    key,
+    value,
   });
 }
 
 export async function getItem(key: string) {
-  const { value } = await Storage.get({ key: key });
+  const { value } = await Preferences.get({ key });
   return value;
 }

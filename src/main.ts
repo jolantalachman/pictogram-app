@@ -28,7 +28,11 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
-    provideRouter(routes, withPreloading(PreloadAllModules), withHashLocation()),
+    provideRouter(
+      routes,
+      withPreloading(PreloadAllModules),
+      withHashLocation()
+    ),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {
