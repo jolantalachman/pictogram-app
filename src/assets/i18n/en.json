@@ -14,8 +14,8 @@
     "QUESTIONS": "Questions",
     "EXPRESSIONS": "Expressions",
     "YOUR_SENTENCE": "Your sentence",
-    "GENERATED_SENTENCE": "Generated sentence (press icon to speak)",
-    "PLAYING_SENTENCE": "Playing the sentence"
+    "GENERATED_SENTENCE": "Generated sentence",
+    "PLAY": "Play"
   },
   "ADD_SENTENCE": {
     "ADD": "Add",

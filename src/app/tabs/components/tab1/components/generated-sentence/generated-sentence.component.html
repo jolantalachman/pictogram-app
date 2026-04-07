@@ -22,7 +22,9 @@
       </div>
     }
     @if (playMode) {
-      <ion-icon name="volume-high-sharp" (click)="speak()"></ion-icon>
+      <ion-button shape="round" color="secondary" (click)="speak()">
+        {{ 'SENTENCE.PLAY' | translate }}
+      </ion-button>
     }
   </div>
 } @else {

@@ -8,27 +8,27 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { Observable, of } from 'rxjs';
 import { Tile } from 'src/app/models/tile.model';
 import { TextToSpeech } from '@capacitor-community/text-to-speech';
-import { IonIcon, IonSpinner } from '@ionic/angular/standalone';
+import { IonIcon, IonSpinner, IonButton } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { volumeHighSharp, closeOutline } from 'ionicons/icons';
+import { closeOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-generated-sentence',
   templateUrl: './generated-sentence.component.html',
   styleUrls: ['./generated-sentence.component.scss'],
   standalone: true,
-  imports: [TranslateModule, CommonModule, IonIcon, IonSpinner],
+  imports: [TranslateModule, CommonModule, IonIcon, IonSpinner, IonButton],
 })
 export class GeneratedSentenceComponent implements OnInit, OnChanges {
   @Input() selectedTiles$: Observable<Tile[]> = of([]);
   @Input() generatedSentence: string | null = null;
   @Output() speakEnded = new EventEmitter<boolean>();
-  constructor(private translate: TranslateService) {
-    addIcons({ volumeHighSharp, closeOutline });
+  constructor() {
+    addIcons({ closeOutline });
   }
   playMode: boolean = false;
 

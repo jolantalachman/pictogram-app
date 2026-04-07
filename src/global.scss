@@ -53,6 +53,9 @@ ion-item {
 ion-button {
   --background: #{$accent-color};
   --color: #{$text-color};
+
+  --ion-color-secondary: #{$primary-color};
+  --ion-color-secondary-contrast: #{$text-color};
 }
 
 ion-card {

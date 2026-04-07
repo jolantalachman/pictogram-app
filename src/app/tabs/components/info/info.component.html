@@ -3,6 +3,18 @@
     <ion-label
       ><h1>{{ 'INFO.TITLE' | translate }}</h1></ion-label
     >
+    <span>
+      An application built using Ionic and Angular, designed to enable users to
+      construct sentences using sequences of pictograms. The application is
+      intended for individuals with communication difficulties, including people
+      with autism, aphasia, as well as children learning basic words and
+      phrases. Users can select pictograms from an available library and combine
+      them into sequences to create simple messages.
+    </span>
+    <span
+      ><b> Note:</b> This is a web version of the application created for
+      demonstration purposes.
+    </span>
     <span class="prompt-container">
       <ion-input
         (ionChange)="promptChanged($event)"
@@ -25,7 +37,7 @@
         [label]="'INFO.TILES_IN_ROW' | translate"
         fill="solid"
         [(ngModel)]="tileLayout">
-        @for (columnNum of [].constructor(6); track $index) {
+        @for (columnNum of tileOptions; track $index) {
           <ion-select-option [value]="$index + 1">{{
             $index + 1
           }}</ion-select-option>

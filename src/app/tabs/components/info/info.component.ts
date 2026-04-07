@@ -16,6 +16,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { APIService } from '../tab1/services/api.service';
 import { TileService } from '../tab1/services/tile.service';
 import { setItem } from 'src/app/storage';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-info',
@@ -43,11 +44,19 @@ export class InfoComponent implements OnInit {
   language = this.translate.currentLang;
   isPromptDefault = true;
   isTileLayoutDefault = true;
+  tileOptions = [];
+
   constructor(
     private apiService: APIService,
     private tileService: TileService,
-    private translate: TranslateService
-  ) {}
+    private translate: TranslateService,
+    private platform: Platform
+  ) {
+    platform.ready().then(() => {
+      const size = Math.ceil(platform.width() / 150);
+      this.tileOptions = [].constructor(size > 6 ? 6 : size);
+    });
+  }
 
   ngOnInit() {
     this.initDefault();

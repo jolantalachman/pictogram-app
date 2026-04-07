@@ -8,6 +8,7 @@
   height: 100%;
   color: $highlight-color;
   padding-inline: 20px;
+  text-align: center;
 
   ion-input {
     color: black;
@@ -16,6 +17,7 @@
 
   ion-select {
     color: black;
+    background-color: $highlight-color;
   }
 
   .prompt-container {
