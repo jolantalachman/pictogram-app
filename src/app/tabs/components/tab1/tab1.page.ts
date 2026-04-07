@@ -37,6 +37,7 @@ import { TileService } from './services/tile.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BehaviorSubject, Observable, switchMap, tap } from 'rxjs';
 import { APIService } from './services/api.service';
+import { TextToSpeech } from '@capacitor-community/text-to-speech';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import {
@@ -176,11 +177,26 @@ export class Tab1Page implements OnInit {
     this.apiService.generateSentence(prompt).then(sentence => {
       if (sentence) {
         this.generatedSentence = sentence;
+        this.speak(this.generatedSentence);
       } else {
         this.isPlayMode = false;
       }
     });
   }
+
+    speak = (sentence: string | null) => {
+    TextToSpeech.speak({
+      text: sentence ?? '',
+      lang: "en-US",
+      rate: 1.0,
+      pitch: 1.0,
+      volume: 1.0,
+      category: 'ambient',
+      queueStrategy: 1,
+    }).then(() => {
+      this.handleSpeakEnded();
+    });
+  };
 
   handleSpeakEnded() {
     const tiles = this.selectedTiles.value;
