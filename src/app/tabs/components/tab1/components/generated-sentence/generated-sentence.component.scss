@@ -11,6 +11,18 @@
   justify-content: center;
   gap: 8px;
 
+  .close-icon {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+
+    ion-icon {
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
   .align-items {
     display: flex;
     gap: 8px;

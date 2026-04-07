@@ -14,7 +14,7 @@ import { Tile } from 'src/app/models/tile.model';
 import { TextToSpeech } from '@capacitor-community/text-to-speech';
 import { IonIcon, IonSpinner } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { volumeHighSharp } from 'ionicons/icons';
+import { volumeHighSharp, closeOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-generated-sentence',
@@ -28,23 +28,22 @@ export class GeneratedSentenceComponent implements OnInit, OnChanges {
   @Input() generatedSentence: string | null = null;
   @Output() speakEnded = new EventEmitter<boolean>();
   constructor(private translate: TranslateService) {
-    addIcons({ volumeHighSharp });
+    addIcons({ volumeHighSharp, closeOutline });
   }
   playMode: boolean = false;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['generatedSentence'].currentValue) {
       this.playMode = true;
-      this.speak(this.generatedSentence);
     }
   }
 
   ngOnInit() {}
 
-  speak = (sentence: string | null) => {
+  speak = () => {
     TextToSpeech.speak({
-      text: sentence ?? '',
-      lang: "en-US",
+      text: this.generatedSentence ?? '',
+      lang: 'en-US',
       rate: 1.0,
       pitch: 1.0,
       volume: 1.0,
@@ -52,7 +51,11 @@ export class GeneratedSentenceComponent implements OnInit, OnChanges {
       queueStrategy: 1,
     }).then(() => {
       this.playMode = false;
-      this.speakEnded.next(true);
+      this.speakEnded.emit(true);
     });
   };
+
+  close() {
+    this.speakEnded.next(true);
+  }
 }

@@ -13,7 +13,8 @@
     "ADJECTIVES": "Adjectives",
     "QUESTIONS": "Questions",
     "EXPRESSIONS": "Expressions",
-    "GENERATED_SENTENCE": "Generated sentence",
+    "YOUR_SENTENCE": "Your sentence",
+    "GENERATED_SENTENCE": "Generated sentence (press icon to speak)",
     "PLAYING_SENTENCE": "Playing the sentence"
   },
   "ADD_SENTENCE": {
