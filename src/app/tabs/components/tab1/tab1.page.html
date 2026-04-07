@@ -18,7 +18,8 @@
     <ion-fab vertical="top" slot="fixed" [style.width]="'100%'">
       <app-generated-sentence
         [selectedTiles$]="selectedTiles$"
-        [playMode]="isPlayMode"></app-generated-sentence>
+        [generatedSentence]="generatedSentence"
+        (speakEnded)="handleSpeakEnded()"></app-generated-sentence>
     </ion-fab>
     @if (selectedTiles$ | async; as selectedTiles) {
     <div *ngIf="selectedTiles.length > 0" [style.height]="'140px'"></div>
